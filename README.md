@@ -24,4 +24,4 @@ LocalStorage API
 
 <img width="1894" height="865" alt="Image" src="https://github.com/user-attachments/assets/a475be51-bb56-4e62-9111-c71e1031ad1d" />
 
-<img width="1894" height="865" alt="Image" src="https://github.com/user-attachments/assets/a475be51-bb56-4e62-9111-c71e1031ad1d" />
+
