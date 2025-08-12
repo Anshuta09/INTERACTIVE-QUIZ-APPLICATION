@@ -18,3 +18,8 @@ HTML5
 CSS3
 JavaScript
 LocalStorage API 
+
+
+*OUTPUT*
+
+<img width="1894" height="865" alt="Image" src="https://github.com/user-attachments/assets/a475be51-bb56-4e62-9111-c71e1031ad1d" />
