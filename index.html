@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tri-Topic Quiz — HTML/CSS/JavaScript (30 Q each)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">QZ</div>
+          <div>
+            <h1>Tri-Topic Quiz</h1>
+            <p class="subtitle">
+              HTML • CSS • JavaScript — 30 questions each — progress saved
+              locally
+            </p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <label class="theme-switch">
+            <input id="themeToggle" type="checkbox" />
+            <span>Dark</span>
+          </label>
+          <button id="logoutBtn" class="btn small">Logout</button>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main>
+        <!-- Login / Welcome -->
+        <section id="loginSection" class="card view">
+          <h2>Welcome — sign in</h2>
+          <p class="muted">
+            Enter a name and email. Progress is stored in your browser tied to
+            the email.
+          </p>
+
+          <label
+            >Name
+            <input id="nameInput" type="text" placeholder="Your name" />
+          </label>
+
+          <label
+            >Email
+            <input id="emailInput" type="email" placeholder="you@example.com" />
+          </label>
+
+          <div class="row">
+            <button id="startBtn" class="btn primary">Start / Create</button>
+            <button id="resumeBtn" class="btn">Resume</button>
+          </div>
+        </section>
+
+        <!-- Topic selection -->
+        <section id="topicSection" class="card view hidden">
+          <div class="row space-between">
+            <div>
+              <h2 id="greeting">Hi</h2>
+              <p class="muted" id="userEmailText"></p>
+            </div>
+            <div class="small muted">Choose a topic to start</div>
+          </div>
+
+          <div class="topics">
+            <button class="topic-btn" data-topic="html">HTML — 30 Q</button>
+            <button class="topic-btn" data-topic="css">CSS — 30 Q</button>
+            <button class="topic-btn" data-topic="js">JavaScript — 30 Q</button>
+          </div>
+
+          <div class="row">
+            <button id="clearAllBtn" class="btn neutral">
+              Clear ALL saved progress for this email
+            </button>
+          </div>
+        </section>
+
+        <!-- Quiz -->
+        <section id="quizSection" class="card view hidden">
+          <div class="quiz-header">
+            <div>
+              <h3 id="topicTitle">Topic</h3>
+              <div class="muted" id="quizMeta">
+                Question <span id="qIndex">1</span> /
+                <span id="qTotal">30</span>
+              </div>
+            </div>
+
+            <div class="quiz-actions">
+              <div class="progress-bar" aria-hidden>
+                <i id="progressFill"></i>
+              </div>
+              <div class="small muted" id="scorePreview">Score: 0</div>
+            </div>
+          </div>
+
+          <div id="questionCard" class="question-card">
+            <div id="questionText" class="question">Loading...</div>
+            <div id="optionsList" class="options"></div>
+          </div>
+
+          <div class="row nav-row">
+            <button id="prevBtn" class="btn">Previous</button>
+            <button id="nextBtn" class="btn primary">Next</button>
+            <button id="submitBtn" class="btn success">Submit & Finish</button>
+          </div>
+
+          <div class="side-grid">
+            <div class="small muted">Jump to question</div>
+            <div id="jumpGrid" class="jump-grid"></div>
+          </div>
+        </section>
+
+        <!-- Result / Review -->
+        <section id="resultSection" class="card view hidden">
+          <h2>Quiz Results</h2>
+          <p id="resultSummary" class="muted"></p>
+          <div id="resultBreakdown"></div>
+          <div class="row">
+            <button id="reviewBtn" class="btn">Review Answers</button>
+            <button id="backTopicsBtn" class="btn primary">
+              Back to Topics
+            </button>
+            <button id="exportBtn" class="btn neutral">Export Progress</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer muted">
+        Tri-Topic Quiz • Progress saved in browser • Theme persists
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
